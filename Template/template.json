@@ -1,3 +1,26 @@
+Skip to content
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@kokozaurz 
+Learn Git and GitHub without any code!
+Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
+
+
+0
+07kokozaurz/portainer_templates
+forked from Qballjos/portainer_templates
+ Code Pull requests 0 Projects 0 Wiki Security Insights Settings
+portainer_templates/Template/template.json
+@kokozaurz kokozaurz Update template.json
+5841fc9 8 days ago
+@Qballjos@kokozaurz@inv1sible
+2071 lines (2070 sloc)  58.5 KB
+  
 [  
   {  
     "type": 1,
@@ -1606,6 +1629,35 @@
     "description": "Radarr - A fork of Sonarr to work with movies \u00e0 la Couchpotato.",
     "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/radarr.png",
     "image": "linuxserver/radarr:latest",
+    "category": ["Downloaders", "Video"],
+    "platform": "linux",
+    "ports": [  
+      "7878/tcp"
+    ],
+    "volumes": [  
+      {"container": "/config"},
+      {"container": "/downloads"},
+      {"container": "/movies"}
+    ],
+    "env": [  
+      {  
+        "name":"PUID",
+        "label":"PUID",
+        "set":""
+      },
+      {  
+        "name":"PGID",
+        "label":"PGID",
+        "set":""
+      }
+    ]
+  },
+  {  
+    "type": 1,
+    "title": "radarr preview",
+    "description": "Radarr - A fork of Sonarr to work with movies \u00e0 la Couchpotato.",
+    "logo": "https://raw.githubusercontent.com/Qballjos/portainer_templates/master/Images/radarr.png",
+    "image": "linuxserver/radarr:preview",
     "category": ["Downloaders", "Video"],
     "platform": "linux",
     "ports": [  
